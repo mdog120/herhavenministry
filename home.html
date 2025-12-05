@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Her Haven Ministry ✨</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a softer look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pacifico&display=swap');
+        
+        /* Apply Inter as the primary font and Pacifico for the main title */
+        :root {
+            --color-primary: #ec4899; /* Pink-500 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdf2f8; /* Very light pink background */
+            color: #3f3f46; /* Gray-700 for text */
+        }
+        
+        .title-font {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Custom utility class for the header effect */
+        .hero-background {
+            background: linear-gradient(180deg, #fce7f3 0%, #fdf2f8 100%);
+        }
+
+        .card {
+            border: 1px solid #fbcfe8; /* Light pink border */
+            box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.1), 0 4px 6px -2px rgba(236, 72, 153, 0.05); /* Soft pink shadow */
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+    <div class="hero-background pb-12">
+        <!-- Header/Hero Section -->
+        <header class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
+            <h1 class="title-font text-6xl md:text-8xl text-pink-600 mb-2">
+                Her Haven
+            </h1>
+            <p class="text-xl md:text-2xl text-pink-700 font-semibold tracking-tight">
+                Ministry & Community Club
+            </p>
+            <div class="mt-4 flex justify-center space-x-4 text-2xl">
+                <span class="text-pink-500">💗</span>
+                <span class="text-gray-500">✨</span>
+                <span class="text-pink-500">🍩</span>
+                <span class="text-gray-500">🤍</span>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-4xl mx-auto -mt-6 px-4 pb-12 space-y-8">
+        
+        <!-- Section 1: Overview and Mission -->
+        <section id="overview" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                Our Heart & Mission
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-600">
+                Her Haven is a gentle, female-centered Christian community club created for people who want to spread kindness, faith, and joy in our city. It’s a calm, cozy space where we grow together, pray together, and dream up volunteering projects that bring light to those who need extra love and support (plus donuts + pastries 🍩💗).
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                Every meeting feels like a soft reset — friendship, faith, and learning about womanhood all blended together. If you’re someone who loves Jesus, loves people, and wants to make a real difference with a supportive, joyful community, Her Haven is your place. 🤍✨
+            </p>
+        </section>
+
+        <!-- Section 2: Meeting & Connect Info -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <section id="meetings" class="p-6 bg-white rounded-3xl card">
+                <h2 class="text-2xl font-bold text-pink-600 mb-3 flex items-center">
+                    <span class="text-3xl mr-2">📅</span>
+                    Meeting Up
+                </h2>
+                <div class="space-y-2">
+                    <p class="text-lg">
+                        <span class="font-semibold text-gray-700">Time:</span> Every Other Monday
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-semibold text-gray-700">Hours:</span> 4:30 PM – 5:30 PM
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-semibold text-gray-700">Location:</span> Ms. Mercado’s Room
+                    </p>
+                </div>
+            </section>
+
+            <section id="connect" class="p-6 bg-white rounded-3xl card">
+                <h2 class="text-2xl font-bold text-pink-600 mb-3 flex items-center">
+                    <span class="text-3xl mr-2">📲</span>
+                    Let's Connect!
+                </h2>
+                <p class="text-lg text-gray-600 mb-4">
+                    Follow us on Instagram for updates, event reminders, and daily doses of encouragement!
+                </p>
+                <a href="https://instagram.com/herhavendallas" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition duration-150 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.774 1.583 4.908 4.908.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.583 4.774-4.908 4.908-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.774-1.583-4.908-4.908-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.583-4.774 4.908-4.908 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.376 0-3.882.015-5.238.067-3.468.158-5.234 1.924-5.392 5.392-.052 1.356-.067 1.862-.067 5.238s.015 3.882.067 5.238c.158 3.468 1.924 5.234 5.392 5.392 1.356.052 1.862.067 5.238.067 3.376 0 3.882-.015 5.238-.067 3.468-.158 5.234-1.924 5.392-5.392.052-1.356.067-1.862.067-5.238s-.015-3.882-.067-5.238c-.158-3.468-1.924-5.234-5.392-5.392-1.356-.052-1.862-.067-5.238-.067zm0 12c-2.484 0-4.5 2.016-4.5 4.5s2.016 4.5 4.5 4.5 4.5-2.016 4.5-4.5-2.016-4.5-4.5-4.5zm0 8.5c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm6.5-11.5c-.74 0-1.341.601-1.341 1.341s.601 1.341 1.341 1.341 1.341-.601 1.341-1.341-.601-1.341-1.341-1.341z"/>
+                    </svg>
+                    @herhavendallas
+                </a>
+            </section>
+        </div>
+
+        <!-- Section 3: Activities & Service -->
+        <section id="activities" class="p-6 bg-white rounded-3xl card">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
+                <span class="text-3xl mr-2">🌟</span>
+                Hands-On Service & Activities
+            </h2>
+            <p class="text-lg text-gray-600 mb-4">
+                We plan sweet, meaningful ways to brighten someone’s day. Here are some of our core activities:
+            </p>
+            <ul class="space-y-2 list-none p-0">
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Creating blessing kits for shelters.
+                </li>
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Writing encouragement letters and cards.
+                </li>
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Making small joy bundles for underprivileged kids.
+                </li>
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Hosting girlhood + faith discussions for spiritual growth.
+                </li>
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Planning community volunteer days and visiting shelters.
+                </li>
+                <li class="flex items-start text-lg text-gray-700">
+                    <span class="text-pink-400 mr-2 mt-1">✓</span>
+                    Donation-based activities (like bake sales and drives).
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section 4: Club Officers -->
+        <section id="officers" class="p-6 bg-white rounded-3xl card">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-6 flex items-center">
+                <span class="text-3xl mr-2">👑</span>
+                Our Leadership Team
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Officer Card Component -->
+                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
+                    <p class="text-xl font-bold text-pink-700">Morola Omotoso</p>
+                    <p class="text-sm font-medium text-gray-500">Founder / President</p>
+                    <span class="text-lg">💗</span>
+                </div>
+
+                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
+                    <p class="text-xl font-bold text-pink-700">Isa Acosta Cruz</p>
+                    <p class="text-sm font-medium text-gray-500">Vice President</p>
+                    <span class="text-lg">💗</span>
+                </div>
+
+                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
+                    <p class="text-xl font-bold text-pink-700">Emma Martinez-Rosado</p>
+                    <p class="text-sm font-medium text-gray-500">Service Coordinator</p>
+                    <span class="text-lg">💗</span>
+                </div>
+                
+                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
+                    <p class="text-xl font-bold text-pink-700">Macy Davis & Daisy Lopez</p>
+                    <p class="text-sm font-medium text-gray-500">Creative Directors</p>
+                    <span class="text-lg">💗</span>
+                </div>
+
+                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
+                    <p class="text-xl font-bold text-pink-700">Ms. Mercado</p>
+                    <p class="text-sm font-medium text-gray-500">Sponsor</p>
+                    <span class="text-lg">💗</span>
+                </div>
+
+                <!-- Open Positions -->
+                <div class="bg-pink-100 p-4 rounded-xl text-center shadow-md border-2 border-dashed border-pink-300">
+                    <p class="text-xl font-bold text-pink-700">Open Positions</p>
+                    <p class="text-sm font-medium text-gray-500">Event Planner Leader, Outreach Team Leader, Prayer Leader</p>
+                    <p class="text-xs mt-2 text-pink-500">Ask the President how to apply!</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-8 border-t border-pink-200 text-center text-sm text-gray-500 bg-pink-50">
+        <p>&copy; 2024 Her Haven Ministry. All rights reserved. Open to All Schools!</p>
+    </footer>
+</body>
+</html>
