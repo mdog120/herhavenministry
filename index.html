@@ -19,6 +19,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #fdf2f8; /* Very light pink background */
             color: #3f3f46; /* Gray-700 for text */
+            padding-top: 64px; /* Space for the fixed navbar */
         }
         
         .title-font {
@@ -34,9 +35,33 @@
             border: 1px solid #fbcfe8; /* Light pink border */
             box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.1), 0 4px 6px -2px rgba(236, 72, 153, 0.05); /* Soft pink shadow */
         }
+
+        /* Style for the fixed navbar */
+        .navbar {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-10 bg-pink-100/95 backdrop-blur-sm p-3 border-b border-pink-200">
+        <div class="max-w-4xl mx-auto flex justify-between items-center flex-wrap">
+            <!-- Club Name/Logo Link -->
+            <a href="#" class="title-font text-2xl text-pink-700 font-bold tracking-wider">
+                Her Haven 🤍
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap space-x-3 md:space-x-6 text-sm md:text-base font-semibold">
+                <a href="#done" class="text-pink-600 hover:text-pink-800 transition duration-150">What We've Done</a>
+                <a href="#started" class="text-pink-600 hover:text-pink-800 transition duration-150">How We Started</a>
+                <a href="#events" class="text-pink-600 hover:text-pink-800 transition duration-150">Events</a>
+                <a href="#prayer" class="text-pink-600 hover:text-pink-800 transition duration-150">Prayer</a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="hero-background pb-12">
         <!-- Header/Hero Section -->
         <header class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
@@ -58,7 +83,7 @@
     <!-- Main Content Grid -->
     <main class="max-w-4xl mx-auto -mt-6 px-4 pb-12 space-y-8">
         
-        <!-- Section 1: Overview and Mission -->
+        <!-- Section 1: Overview and Mission (Existing) -->
         <section id="overview" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
             <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -74,7 +99,72 @@
             </p>
         </section>
 
-        <!-- Section 2: Meeting & Connect Info -->
+        <!-- NEW SECTION: How We Started -->
+        <section id="started" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
+                <span class="text-3xl mr-2">🌱</span>
+                How We Started
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-600">
+                Her Haven began with the belief that Christian girls and young women need a familiar, cozy place to connect, support each other, and grow in faith. We saw a need for a supportive community focused on kind action and genuine friendship—a place where faith and fun blend together perfectly. This club is built on the desire to make meaningful differences in our city while cheering each other on!
+            </p>
+        </section>
+
+        <!-- NEW SECTION: What We've Done -->
+        <section id="done" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
+                <span class="text-3xl mr-2">🎉</span>
+                What We've Done
+            </h2>
+            <div class="bg-pink-50 p-6 rounded-xl text-center">
+                <p class="text-xl text-pink-600 font-semibold">Coming soon!</p>
+                <p class="text-lg text-gray-600 mt-2">
+                    We're just getting started on this journey, but we can't wait to share all our service projects and successes here! Check back soon for photos and updates on what we've done! ✨
+                </p>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: Events -->
+        <section id="events" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
+                <span class="text-3xl mr-2">🗓️</span>
+                Upcoming Events
+            </h2>
+            <div class="bg-pink-50 p-6 rounded-xl text-center">
+                <p class="text-xl text-pink-600 font-semibold">Coming soon!</p>
+                <p class="text-lg text-gray-600 mt-2">
+                    Our calendar is filling up with exciting service days, faith discussions, and social gatherings! Please follow our Instagram (<span class="font-mono text-pink-700">@herhavendallas</span>) for the latest schedule. Events list coming soon!
+                </p>
+            </div>
+        </section>
+        
+        <!-- NEW SECTION: Prayer Request -->
+        <section id="prayer" class="p-6 bg-white rounded-3xl card">
+            <h2 class="text-3xl font-extrabold text-pink-600 mb-6 flex items-center">
+                <span class="text-3xl mr-2">🙏</span>
+                Submit a Prayer Request
+            </h2>
+            <p class="text-lg text-gray-600 mb-4">
+                Our prayer team is here to lift up your needs. Type what you need prayer for below, and we will pray for you! (Note: This information is not stored permanently and is only for display.)
+            </p>
+            <!-- Prayer Form -->
+            <form id="prayer-form" class="space-y-4">
+                <div>
+                    <label for="prayer-input" class="sr-only">Your Prayer Request</label>
+                    <textarea id="prayer-input" rows="4" class="w-full p-3 border border-pink-300 rounded-xl focus:ring-pink-500 focus:border-pink-500 transition duration-150 ease-in-out" placeholder="Type your prayer request here..." required></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 text-lg font-medium rounded-full text-white bg-pink-500 hover:bg-pink-600 shadow-md transition duration-150 ease-in-out">
+                    Submit Prayer Request
+                </button>
+            </form>
+            
+            <!-- Confirmation Message -->
+            <div id="prayer-message" class="hidden mt-4 p-4 bg-green-100 border border-green-300 text-green-700 rounded-xl text-center font-semibold">
+                Prayer received! Our prayer team is praying for you. 🤍
+            </div>
+        </section>
+
+        <!-- Section 2: Meeting & Connect Info (Existing, moved below new sections) -->
         <div class="grid md:grid-cols-2 gap-8">
             <section id="meetings" class="p-6 bg-white rounded-3xl card">
                 <h2 class="text-2xl font-bold text-pink-600 mb-3 flex items-center">
@@ -112,7 +202,7 @@
             </section>
         </div>
 
-        <!-- Section 3: Activities & Service -->
+        <!-- Section 3: Activities & Service (Existing) -->
         <section id="activities" class="p-6 bg-white rounded-3xl card">
             <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
                 <span class="text-3xl mr-2">🌟</span>
@@ -149,7 +239,7 @@
             </ul>
         </section>
 
-        <!-- Section 4: Club Officers -->
+        <!-- Section 4: Club Officers (Existing) -->
         <section id="officers" class="p-6 bg-white rounded-3xl card">
             <h2 class="text-3xl font-extrabold text-pink-600 mb-6 flex items-center">
                 <span class="text-3xl mr-2">👑</span>
@@ -202,7 +292,35 @@
 
     <!-- Footer -->
     <footer class="mt-12 py-8 border-t border-pink-200 text-center text-sm text-gray-500 bg-pink-50">
-        <p>&copy; 2024 Her Haven Ministry. All rights reserved. Open to All Schools!</p>
+        <p>&copy; 2025 Her Haven Ministry. All rights reserved. Open to All Schools!</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prayerForm = document.getElementById('prayer-form');
+            const prayerInput = document.getElementById('prayer-input');
+            const prayerMessage = document.getElementById('prayer-message');
+
+            // Handle the submission of the prayer form
+            prayerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // 1. Hide the form
+                prayerForm.classList.add('hidden');
+                
+                // 2. Show the confirmation message
+                prayerMessage.classList.remove('hidden');
+
+                // 3. Clear the input (optional, but good practice)
+                prayerInput.value = '';
+
+                // 4. Reset the message/form after a few seconds so a new request can be entered
+                setTimeout(() => {
+                    prayerMessage.classList.add('hidden');
+                    prayerForm.classList.remove('hidden');
+                }, 5000); // Wait 5 seconds before resetting
+            });
+        });
+    </script>
 </body>
 </html>
