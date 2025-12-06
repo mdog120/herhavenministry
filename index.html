@@ -4,198 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Her Haven Ministry ✨</title>
+    <title>Her Haven Ministry | Official Site</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom font import for a softer look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pacifico&display=swap');
+        /* Custom font import for a professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-        /* Apply Inter as the primary font and Pacifico for the main title */
+        /* Define the professional color palette (Pink Focus) */
         :root {
-            --color-primary: #ec4899; /* Pink-500 */
+            --color-primary-accent: #E11D48; /* Rose-600 equivalent (Accent) */
+            --color-soft-beige: #fef3f6;    /* Rose-50 (Body Background - Very Light Pink) */
+            --color-dark-text: #171717;     /* High contrast dark gray/black */
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fdf2f8; /* Very light pink background */
-            color: #3f3f46; /* Gray-700 for text */
+            background-color: var(--color-soft-beige);
+            color: var(--color-dark-text); 
             padding-top: 64px; /* Space for the fixed navbar */
         }
         
-        .title-font {
-            font-family: 'Pacifico', cursive;
-        }
-
-        /* Custom utility class for the header effect */
+        /* Custom utility class for the header effect (Very Light Pink Gradient) */
         .hero-background {
-            background: linear-gradient(180deg, #fce7f3 0%, #fdf2f8 100%);
+            /* Using a very light rose for a warm gradient effect */
+            background: linear-gradient(180deg, #fce7f3 0%, var(--color-soft-beige) 100%); 
         }
 
         .card {
-            border: 1px solid #fbcfe8; /* Light pink border */
-            box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.1), 0 4px 6px -2px rgba(236, 72, 153, 0.05); /* Soft pink shadow */
+            background-color: white;
+            border: 1px solid #fbcfe8; /* Light pink border for structure */
+            /* Subtle, professional shadow */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04); 
         }
 
         /* Style for the fixed navbar */
         .navbar {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
 <body class="antialiased min-h-screen">
 
-    <!-- Navigation Bar -->
-    <nav class="navbar fixed top-0 left-0 right-0 z-10 bg-pink-100/95 backdrop-blur-sm p-3 border-b border-pink-200">
-        <div class="max-w-4xl mx-auto flex justify-between items-center flex-wrap">
+    <!-- Navigation Bar (Clean White/Pink) -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-10 bg-white/90 backdrop-blur-sm p-3 border-b border-rose-200">
+        <div class="max-w-5xl mx-auto flex justify-between items-center flex-wrap">
             <!-- Club Name/Logo Link -->
-            <a href="#" class="title-font text-2xl text-pink-700 font-bold tracking-wider">
-                Her Haven 🤍
+            <a href="#" class="text-2xl text-rose-800 font-extrabold tracking-tight">
+                Her Haven Ministry
             </a>
             
             <!-- Navigation Links -->
-            <div class="flex flex-wrap space-x-3 md:space-x-6 text-sm md:text-base font-semibold">
-                <a href="#done" class="text-pink-600 hover:text-pink-800 transition duration-150">What We've Done</a>
-                <a href="#started" class="text-pink-600 hover:text-pink-800 transition duration-150">How We Started</a>
-                <a href="#events" class="text-pink-600 hover:text-pink-800 transition duration-150">Events</a>
-                <a href="#prayer" class="text-pink-600 hover:text-pink-800 transition duration-150">Prayer</a>
+            <div class="flex flex-wrap space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+                <a href="#done" class="text-gray-700 hover:text-rose-600 transition duration-150">What We've Done</a>
+                <a href="#started" class="text-gray-700 hover:text-rose-600 transition duration-150">How We Started</a>
+                <a href="#events" class="text-gray-700 hover:text-rose-600 transition duration-150">Events</a>
+                <a href="#donate" class="text-gray-700 hover:text-rose-600 transition duration-150">Donate</a>
+                <a href="#prayer" class="text-gray-700 hover:text-rose-600 transition duration-150">Prayer</a>
             </div>
         </div>
     </nav>
     
-    <div class="hero-background pb-12">
-        <!-- Header/Hero Section -->
-        <header class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
-            <h1 class="title-font text-6xl md:text-8xl text-pink-600 mb-2">
+    <div class="hero-background pb-16 pt-12">
+        <!-- Header/Hero Section (More formal presentation) -->
+        <header class="max-w-5xl mx-auto px-4 text-center">
+            
+            <h1 class="text-5xl md:text-7xl text-rose-800 font-black mb-2 tracking-tight">
                 Her Haven
             </h1>
-            <p class="text-xl md:text-2xl text-pink-700 font-semibold tracking-tight">
-                Ministry & Community Club
+            <p class="text-xl md:text-2xl text-gray-700 font-medium max-w-2xl mx-auto">
+                A Christ-centered organization dedicated to service, community building, and spiritual growth among young women.
             </p>
-            <div class="mt-4 flex justify-center space-x-4 text-2xl">
-                <span class="text-pink-500">💗</span>
-                <span class="text-gray-500">✨</span>
-                <span class="text-pink-500">🍩</span>
-                <span class="text-gray-500">🤍</span>
+
+            <!-- Prominent, Professional Sign Up Link -->
+            <div class="mt-8">
+                <a href="https://forms.gle/a5EYiu99SxCtCyBL9" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center px-8 py-3 border-2 border-rose-600 text-base font-semibold rounded-lg shadow-xl text-white bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-300 transition duration-300 ease-in-out">
+                    Join Our Community & Sign Up
+                </a>
             </div>
         </header>
     </div>
 
     <!-- Main Content Grid -->
-    <main class="max-w-4xl mx-auto -mt-6 px-4 pb-12 space-y-8">
+    <main class="max-w-5xl mx-auto -mt-6 px-4 pb-16 space-y-10">
         
-        <!-- Section 1: Overview and Mission (Existing) -->
-        <section id="overview" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        <!-- Section 1: Overview and Mission -->
+        <section id="overview" class="p-8 rounded-xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-rose-800 mb-4 flex items-center">
+                <svg class="h-6 w-6 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                Our Heart & Mission
+                Our Mission and Purpose
             </h2>
-            <p class="text-lg leading-relaxed text-gray-600">
-                Her Haven is a gentle, female-centered Christian community club created for people who want to spread kindness, faith, and joy in our city. It’s a calm, cozy space where we grow together, pray together, and dream up volunteering projects that bring light to those who need extra love and support (plus donuts + pastries 🍩💗).
+            <p class="text-lg leading-relaxed text-gray-700">
+                Her Haven is a faith-based community club created to provide a structured, supportive environment for young Christian women to engage in meaningful service and fellowship. Our goal is to cultivate leadership skills, strengthen spiritual foundations, and execute impactful volunteering projects within our local city.
             </p>
-            <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                Every meeting feels like a soft reset — friendship, faith, and learning about womanhood all blended together. If you’re someone who loves Jesus, loves people, and wants to make a real difference with a supportive, joyful community, Her Haven is your place. 🤍✨
-            </p>
-        </section>
-
-        <!-- NEW SECTION: How We Started -->
-        <section id="started" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
-                <span class="text-3xl mr-2">🌱</span>
-                How We Started
-            </h2>
-            <p class="text-lg leading-relaxed text-gray-600">
-                Her Haven began with the belief that Christian girls and young women need a familiar, cozy place to connect, support each other, and grow in faith. We saw a need for a supportive community focused on kind action and genuine friendship—a place where faith and fun blend together perfectly. This club is built on the desire to make meaningful differences in our city while cheering each other on!
+            <p class="mt-4 text-lg leading-relaxed text-gray-700">
+                We believe in combining actionable service with genuine peer support. If you are passionate about faith, driven by service, and seeking a professional development opportunity within a supportive Christian context, Her Haven offers that space.
             </p>
         </section>
 
-        <!-- NEW SECTION: What We've Done -->
-        <section id="done" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
-                <span class="text-3xl mr-2">🎉</span>
-                What We've Done
-            </h2>
-            <div class="bg-pink-50 p-6 rounded-xl text-center">
-                <p class="text-xl text-pink-600 font-semibold">Coming soon!</p>
-                <p class="text-lg text-gray-600 mt-2">
-                    We're just getting started on this journey, but we can't wait to share all our service projects and successes here! Check back soon for photos and updates on what we've done! ✨
-                </p>
-            </div>
-        </section>
-
-        <!-- NEW SECTION: Events -->
-        <section id="events" class="p-6 bg-white rounded-3xl card transition duration-300 hover:shadow-lg">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
-                <span class="text-3xl mr-2">🗓️</span>
-                Upcoming Events
-            </h2>
-            <div class="bg-pink-50 p-6 rounded-xl text-center">
-                <p class="text-xl text-pink-600 font-semibold">Coming soon!</p>
-                <p class="text-lg text-gray-600 mt-2">
-                    Our calendar is filling up with exciting service days, faith discussions, and social gatherings! Please follow our Instagram (<span class="font-mono text-pink-700">@herhavendallas</span>) for the latest schedule. Events list coming soon!
-                </p>
-            </div>
-        </section>
-        
-        <!-- NEW SECTION: Prayer Request -->
-        <section id="prayer" class="p-6 bg-white rounded-3xl card">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-6 flex items-center">
-                <span class="text-3xl mr-2">🙏</span>
-                Submit a Prayer Request
-            </h2>
-            <p class="text-lg text-gray-600 mb-4">
-                Our prayer team is here to lift up your needs. Type what you need prayer for below, and we will pray for you!
-            </p>
-            <!-- Prayer Form -->
-            <form id="prayer-form" class="space-y-4">
-                <div>
-                    <label for="prayer-input" class="sr-only">Your Prayer Request</label>
-                    <textarea id="prayer-input" rows="4" class="w-full p-3 border border-pink-300 rounded-xl focus:ring-pink-500 focus:border-pink-500 transition duration-150 ease-in-out" placeholder="Type your prayer request here..." required></textarea>
-                </div>
-                <button type="submit" class="w-full px-6 py-3 text-lg font-medium rounded-full text-white bg-pink-500 hover:bg-pink-600 shadow-md transition duration-150 ease-in-out">
-                    Submit Prayer Request
-                </button>
-            </form>
+        <!-- Dynamic Content Sections -->
+        <div class="grid md:grid-cols-2 gap-10">
             
-            <!-- Confirmation Message -->
-            <div id="prayer-message" class="hidden mt-4 p-4 bg-green-100 border border-green-300 text-green-700 rounded-xl text-center font-semibold">
-                Prayer received! Our prayer team is praying for you. 🤍
+            <!-- SECTION: How We Started -->
+            <section id="started" class="p-8 rounded-xl card transition duration-300 hover:shadow-lg">
+                <h2 class="text-2xl font-bold text-rose-800 mb-4 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.692A9.962 9.962 0 012.163 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    Our Founding
+                </h2>
+                <p class="text-base leading-relaxed text-gray-700">
+                    Her Haven began with the belief that Christian girls and young women need a familiar, cozy place to connect, support each other, and grow in faith. We saw a need for a supportive community focused on kind action and genuine friendship—a place where faith and fun blend together perfectly. This club is built on the desire to make meaningful differences in our city while cheering each other on!
+                </p>
+            </section>
+            
+            <!-- SECTION: What We've Done -->
+            <section id="done" class="p-8 rounded-xl card transition duration-300 hover:shadow-lg">
+                <h2 class="text-2xl font-bold text-rose-800 mb-4 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.24A9.954 9.954 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.016-.185-2.007-.533-2.924l-1.04-.694z" />
+                    </svg>
+                    Past Initiatives
+                </h2>
+                <div class="bg-rose-50 p-6 rounded-lg text-center border border-rose-200">
+                    <p class="text-xl text-rose-600 font-semibold">Coming soon! (Initiatives currently in planning)</p>
+                    <p class="text-base text-gray-600 mt-2">
+                        We are finalizing our launch projects, including a community service drive and a leadership workshop. Check back soon for our first major report!
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- SECTION: Activities & Service -->
+        <section id="activities" class="p-8 rounded-xl card">
+            <h2 class="text-3xl font-extrabold text-rose-800 mb-4 flex items-center">
+                <svg class="h-6 w-6 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.513 23.513 0 0112 15c-3.185 0-6.37-2.618-9-5.772V19c0 1.105.895 2 2 2h14c1.105 0 2-.895 2-2v-5.745z" />
+                </svg>
+                Core Activities & Service Pillars
+            </h2>
+            <ul class="space-y-3 list-none p-0 text-base">
+                <li class="flex items-start text-gray-700">
+                    <span class="text-rose-500 mr-3 mt-1 font-bold">●</span>
+                    **Community Outreach:** Organizing local drives and creating essential kits for those experiencing housing insecurity.
+                </li>
+                <li class="flex items-start text-gray-700">
+                    <span class="text-rose-500 mr-3 mt-1 font-bold">●</span>
+                    **Spiritual Development:** Hosting structured discussions and Bible studies focusing on ethical leadership and womanhood.
+                </li>
+                <li class="flex items-start text-gray-700">
+                    <span class="text-rose-500 mr-3 mt-1 font-bold">●</span>
+                    **Leadership Initiatives:** Engaging in donation-based events (like bake sales) to fund club projects and manage resources.
+                </li>
+                <li class="flex items-start text-gray-700">
+                    <span class="text-rose-500 mr-3 mt-1 font-bold">●</span>
+                    **Peer Support:** Maintaining a supportive network through regular fellowship and mentoring.
+                </li>
+            </ul>
+        </section>
+
+        <!-- SECTION: DONATIONS (Zelle) -->
+        <section id="donate" class="p-8 rounded-xl card transition duration-300 hover:shadow-lg">
+            <h2 class="text-3xl font-extrabold text-rose-800 mb-4 flex items-center">
+                <!-- Icon for giving/donation -->
+                <svg class="h-6 w-6 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                Support Our Ministry
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                Your generous donation helps fund our community service initiatives, supplies for outreach, and leadership workshops. Every contribution strengthens our mission.
+            </p>
+
+            <div class="bg-rose-50 p-6 rounded-lg border border-rose-200 space-y-4">
+                <h3 class="text-xl font-bold text-rose-800 flex items-center">
+                    Preferred Method: Zelle
+                </h3>
+                <p class="text-base text-gray-700">
+                    You can securely send your donation directly via Zelle using our dedicated phone number.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-between p-4 bg-white rounded-lg border border-rose-300">
+                    <span class="text-sm sm:text-lg font-mono text-rose-700 select-all mb-3 sm:mb-0" id="zelle-number">682-895-0492</span>
+                    <button onclick="copyToClipboard('682-895-0492', this)"
+                            class="w-full sm:w-auto px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition duration-150 shadow-md">
+                        Copy Zelle Number
+                    </button>
+                </div>
+                <p class="text-sm text-rose-500 pt-2">
+                    *Please ensure the recipient name matches 'Her Haven Ministry' when sending the payment.
+                </p>
             </div>
         </section>
 
-        <!-- Section 2: Meeting & Connect Info (Existing, moved below new sections) -->
-        <div class="grid md:grid-cols-2 gap-8">
-            <section id="meetings" class="p-6 bg-white rounded-3xl card">
-                <h2 class="text-2xl font-bold text-pink-600 mb-3 flex items-center">
-                    <span class="text-3xl mr-2">📅</span>
-                    Meeting Up
+        <!-- SECTION: Events and Prayer (Full Width) -->
+        <section class="grid md:grid-cols-2 gap-10">
+            
+            <!-- Events -->
+            <section id="events" class="p-8 rounded-xl card transition duration-300 hover:shadow-lg">
+                <h2 class="text-2xl font-bold text-rose-800 mb-4 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-4 4h.01M12 11h.01M12 15h.01M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m-4 12H3m18 0h3M3 17h18M5 19h14M10 22h4" />
+                    </svg>
+                    Upcoming Events
                 </h2>
-                <div class="space-y-2">
-                    <p class="text-lg">
-                        <span class="font-semibold text-gray-700">Time:</span> Every Other Monday
-                    </p>
-                    <p class="text-lg">
-                        <span class="font-semibold text-gray-700">Hours:</span> 4:30 PM – 5:30 PM
-                    </p>
-                    <p class="text-lg">
-                        <span class="font-semibold text-gray-700">Location:</span> Ms. Mercado’s Room
+                <div class="bg-rose-50 p-6 rounded-lg text-center border border-rose-200">
+                    <p class="text-xl text-rose-600 font-semibold">Coming soon! (Schedule under development)</p>
+                    <p class="text-base text-gray-600 mt-2">
+                        Look forward to professional development workshops, local service days, and our first club retreat. Follow our social media for official dates!
                     </p>
                 </div>
             </section>
 
-            <section id="connect" class="p-6 bg-white rounded-3xl card">
-                <h2 class="text-2xl font-bold text-pink-600 mb-3 flex items-center">
-                    <span class="text-3xl mr-2">📲</span>
-                    Let's Connect!
+            <!-- Prayer Request -->
+            <section id="prayer" class="p-8 rounded-xl card">
+                <h2 class="text-2xl font-bold text-rose-800 mb-4 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                    </svg>
+                    Confidential Prayer Request
                 </h2>
-                <p class="text-lg text-gray-600 mb-4">
-                    Follow us on Instagram for updates, event reminders, and daily doses of encouragement!
+                <p class="text-base text-gray-700 mb-4">
+                    Submit your prayer request below. Our dedicated prayer team will lift up your need confidentially. (Note: Data is not permanently stored.)
+                </p>
+                <!-- Prayer Form -->
+                <form id="prayer-form" class="space-y-4">
+                    <div>
+                        <label for="prayer-input" class="sr-only">Your Prayer Request</label>
+                        <textarea id="prayer-input" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500 transition duration-150" placeholder="Type your confidential prayer request here..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 text-base font-medium rounded-lg text-white bg-rose-600 hover:bg-rose-700 shadow-md transition duration-150">
+                        Submit Prayer Request
+                    </button>
+                </form>
+                
+                <!-- Confirmation Message - Now soft pink/rose -->
+                <div id="prayer-message" class="hidden mt-4 p-4 bg-rose-100 border border-rose-300 text-rose-700 rounded-lg text-center font-semibold">
+                    Prayer received! Our prayer team is praying for you. Thank you.
+                </div>
+            </section>
+        </section>
+
+        <!-- Meeting & Connect Info (Side-by-Side) -->
+        <div class="grid md:grid-cols-2 gap-10">
+            <section id="meetings" class="p-8 rounded-xl card">
+                <h2 class="text-2xl font-bold text-rose-800 mb-3 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-4 4h.01M12 11h.01M12 15h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Meeting Schedule
+                </h2>
+                <div class="space-y-2 text-base">
+                    <p><span class="font-semibold text-gray-800">Frequency:</span> Every Other Monday</p>
+                    <p><span class="font-semibold text-gray-800">Time:</span> 4:30 PM – 5:30 PM</p>
+                    <p><span class="font-semibold text-gray-800">Location:</span> Ms. Mercado’s Room</p>
+                </div>
+            </section>
+
+            <section id="connect" class="p-8 rounded-xl card">
+                <h2 class="text-2xl font-bold text-rose-800 mb-3 flex items-center">
+                    <svg class="h-5 w-5 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Contact & Social Media
+                </h2>
+                <p class="text-base text-gray-700 mb-4">
+                    Connect with our organization for the latest updates and announcements.
                 </p>
                 <a href="https://instagram.com/herhavendallas" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 transition duration-150 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                   class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-rose-50 transition duration-150 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.774 1.583 4.908 4.908.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.583 4.774-4.908 4.908-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.774-1.583-4.908-4.908-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.583-4.774 4.908-4.908 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.376 0-3.882.015-5.238.067-3.468.158-5.234 1.924-5.392 5.392-.052 1.356-.067 1.862-.067 5.238s.015 3.882.067 5.238c.158 3.468 1.924 5.234 5.392 5.392 1.356.052 1.862.067 5.238.067 3.376 0 3.882-.015 5.238-.067 3.468-.158 5.234-1.924 5.392-5.392.052-1.356.067-1.862.067-5.238s-.015-3.882-.067-5.238c-.158-3.468-1.924-5.234-5.392-5.392-1.356-.052-1.862-.067-5.238-.067zm0 12c-2.484 0-4.5 2.016-4.5 4.5s2.016 4.5 4.5 4.5 4.5-2.016 4.5-4.5-2.016-4.5-4.5-4.5zm0 8.5c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm6.5-11.5c-.74 0-1.341.601-1.341 1.341s.601 1.341 1.341 1.341 1.341-.601 1.341-1.341-.601-1.341-1.341-1.341z"/>
                     </svg>
                     @herhavendallas
@@ -203,87 +283,47 @@
             </section>
         </div>
 
-        <!-- Section 3: Activities & Service (Existing) -->
-        <section id="activities" class="p-6 bg-white rounded-3xl card">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-4 flex items-center">
-                <span class="text-3xl mr-2">🌟</span>
-                Hands-On Service & Activities
-            </h2>
-            <p class="text-lg text-gray-600 mb-4">
-                We plan sweet, meaningful ways to brighten someone’s day. Here are some of our core activities:
-            </p>
-            <ul class="space-y-2 list-none p-0">
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Creating blessing kits for shelters.
-                </li>
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Writing encouragement letters and cards.
-                </li>
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Making small joy bundles for underprivileged kids.
-                </li>
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Hosting girlhood + faith discussions for spiritual growth.
-                </li>
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Planning community volunteer days and visiting shelters.
-                </li>
-                <li class="flex items-start text-lg text-gray-700">
-                    <span class="text-pink-400 mr-2 mt-1">✓</span>
-                    Donation-based activities (like bake sales and drives).
-                </li>
-            </ul>
-        </section>
-
-        <!-- Section 4: Club Officers (Existing) -->
-        <section id="officers" class="p-6 bg-white rounded-3xl card">
-            <h2 class="text-3xl font-extrabold text-pink-600 mb-6 flex items-center">
-                <span class="text-3xl mr-2">👑</span>
-                Our Leadership Team
+        <!-- Section 4: Club Officers -->
+        <section id="officers" class="p-8 rounded-xl card">
+            <h2 class="text-3xl font-extrabold text-rose-800 mb-6 flex items-center">
+                <svg class="h-6 w-6 mr-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20h-2m2 0h-2M10 20v-2a3 3 0 00-5.356-1.857M10 20v-2a3 3 0 015.356-1.857M5 20h5V7a7 7 0 1114 0v13h-4m-9-2h5m-4 2h4" />
+                </svg>
+                Leadership Team
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Officer Card Component -->
-                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
-                    <p class="text-xl font-bold text-pink-700">Morola Omotoso</p>
-                    <p class="text-sm font-medium text-gray-500">Founder / President</p>
-                    <span class="text-lg">💗</span>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border border-rose-200">
+                    <p class="text-xl font-bold text-gray-800">Morola Omotoso</p>
+                    <p class="text-sm font-medium text-rose-600">Founder / President</p>
                 </div>
 
-                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
-                    <p class="text-xl font-bold text-pink-700">Isa Acosta Cruz</p>
-                    <p class="text-sm font-medium text-gray-500">Vice President</p>
-                    <span class="text-lg">💗</span>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border border-rose-200">
+                    <p class="text-xl font-bold text-gray-800">Isa Acosta Cruz</p>
+                    <p class="text-sm font-medium text-rose-600">Vice President</p>
                 </div>
 
-                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
-                    <p class="text-xl font-bold text-pink-700">Emma Martinez-Rosado</p>
-                    <p class="text-sm font-medium text-gray-500">Service Coordinator</p>
-                    <span class="text-lg">💗</span>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border border-rose-200">
+                    <p class="text-xl font-bold text-gray-800">Emma Martinez-Rosado</p>
+                    <p class="text-sm font-medium text-rose-600">Service Coordinator</p>
                 </div>
                 
-                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
-                    <p class="text-xl font-bold text-pink-700">Macy Davis & Daisy Lopez</p>
-                    <p class="text-sm font-medium text-gray-500">Creative Directors</p>
-                    <span class="text-lg">💗</span>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border border-rose-200">
+                    <p class="text-xl font-bold text-gray-800">Macy Davis & Daisy Lopez</p>
+                    <p class="text-sm font-medium text-rose-600">Creative Directors</p>
                 </div>
 
-                <div class="bg-pink-50 p-4 rounded-xl text-center shadow-md">
-                    <p class="text-xl font-bold text-pink-700">Ms. Mercado</p>
-                    <p class="text-sm font-medium text-gray-500">Sponsor</p>
-                    <span class="text-lg">💗</span>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border border-rose-200">
+                    <p class="text-xl font-bold text-gray-800">Ms. Mercado</p>
+                    <p class="text-sm font-medium text-rose-600">Sponsor</p>
                 </div>
 
                 <!-- Open Positions -->
-                <div class="bg-pink-100 p-4 rounded-xl text-center shadow-md border-2 border-dashed border-pink-300">
-                    <p class="text-xl font-bold text-pink-700">Open Positions</p>
-                    <p class="text-sm font-medium text-gray-500">Event Planner Leader, Outreach Team Leader, Prayer Leader</p>
-                    <p class="text-xs mt-2 text-pink-500">Ask the President how to apply!</p>
+                <div class="bg-rose-50 p-4 rounded-lg text-center shadow-sm border-2 border-dashed border-rose-300">
+                    <p class="text-xl font-bold text-rose-700">Opportunities</p>
+                    <p class="text-sm font-medium text-gray-600">Event Planner, Outreach Team, Prayer Leader</p>
+                    <p class="text-xs mt-2 text-rose-500">Inquire about openings!</p>
                 </div>
 
             </div>
@@ -292,11 +332,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-12 py-8 border-t border-pink-200 text-center text-sm text-gray-500 bg-pink-50">
-        <p>&copy; 2025 Her Haven Ministry. All rights reserved. Open to All Schools!</p>
+    <footer class="mt-16 py-8 border-t border-gray-200 text-center text-sm text-gray-500 bg-white">
+        <p>&copy; 2024 Her Haven Ministry. All rights reserved. | Contact: <a href="mailto:info@herhavenministry.org" class="text-rose-600 hover:text-rose-800">info@herhavenministry.org</a></p>
     </footer>
 
     <script>
+        // Function to copy text to the clipboard (needed due to sandbox/iframe security)
+        function copyToClipboard(textToCopy, button) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    const originalText = button.textContent;
+                    // Temporary change button appearance to confirm copy
+                    button.textContent = 'Copied!';
+                    button.classList.remove('bg-rose-600');
+                    button.classList.add('bg-rose-500');
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.classList.remove('bg-rose-500');
+                        button.classList.add('bg-rose-600');
+                    }, 1500);
+                }
+            } catch (err) {
+                console.error('Copy failed: ', err);
+            }
+            document.body.removeChild(tempInput);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const prayerForm = document.getElementById('prayer-form');
             const prayerInput = document.getElementById('prayer-input');
@@ -306,19 +372,27 @@
             prayerForm.addEventListener('submit', (e) => {
                 e.preventDefault();
 
+                // Check if the input is not empty
+                if (prayerInput.value.trim() === '') {
+                    prayerInput.placeholder = "Please enter your prayer request before submitting.";
+                    return;
+                }
+
                 // 1. Hide the form
                 prayerForm.classList.add('hidden');
                 
                 // 2. Show the confirmation message
                 prayerMessage.classList.remove('hidden');
 
-                // 3. Clear the input (optional, but good practice)
+                // 3. Clear the input 
                 prayerInput.value = '';
 
                 // 4. Reset the message/form after a few seconds so a new request can be entered
                 setTimeout(() => {
                     prayerMessage.classList.add('hidden');
                     prayerForm.classList.remove('hidden');
+                    // Reset placeholder after reset
+                    prayerInput.placeholder = "Type your confidential prayer request here...";
                 }, 5000); // Wait 5 seconds before resetting
             });
         });
