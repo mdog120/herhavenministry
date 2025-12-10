@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,10 @@
             
             --color-soft-rose-bg: #FFF0F3;      /* Very light blush background for contrast */
             --color-card-border: #E5D7DB;       /* Soft rose border */
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -90,6 +94,75 @@
 
         #mobile-menu.open {
             max-height: 500px; /* Max height large enough to show all content */
+        }
+
+        /* Zelle button custom style (with hover) */
+        .zelle-button {
+            background-color: var(--color-secondary-taupe);
+            color: var(--color-dark-charcoal);
+            border: 1px solid var(--color-dark-charcoal);
+        }
+
+        .zelle-button:hover {
+            background-color: #B9A595;
+        }
+
+        /* Gallery */
+        .gallery-image {
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* Lightbox styles */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+
+        .lightbox-overlay.open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .lightbox-caption {
+            margin-top: 1rem;
+            color: #F9FAFB;
+            font-size: 0.95rem;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            background-color: rgba(31, 41, 55, 0.9);
+            color: #F9FAFB;
+            border-radius: 9999px;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: 1px solid rgba(156, 163, 175, 0.6);
         }
     </style>
 </head>
@@ -356,17 +429,105 @@
                 <div class="flex flex-col sm:flex-row items-center justify-between p-5 bg-white rounded-xl border-2 border-gray-300 shadow-lg">
                     <span class="text-lg sm:text-2xl font-mono select-all font-bold mb-4 sm:mb-0" id="zelle-number" style="color: var(--color-primary-rose);">682-812-0796</span>
                     <button onclick="copyToClipboard('682-812-0796', this)"
-                            class="w-full sm:w-auto px-8 py-3 text-white text-lg font-semibold rounded-lg shadow-md transition duration-150 transform hover:scale-105 active:scale-100"
-                            style="background-color: var(--color-secondary-taupe); color: var(--color-dark-charcoal); hover: background-color: #B9A595; border: 1px solid var(--color-dark-charcoal);">
+                            class="zelle-button w-full sm:w-auto px-8 py-3 text-white text-lg font-semibold rounded-lg shadow-md transition duration-150 transform hover:scale-105 active:scale-100">
                         Copy Zelle Number
                     </button>
                 </div>
                 <p class="text-sm text-gray-600 pt-3">
-                    *Super important: Please put **'Her Haven Ministry Donation'** in the memo so our Treasurer can log it correctly!
+                    *Super important: Please put <strong>'Her Haven Ministry Donation'</strong> in the memo so our Treasurer can log it correctly!
                 </p>
             </div>
         </section>
 
+        <!-- NEW: Photo Gallery with Lightbox -->
+        <section id="gallery" class="p-10 rounded-3xl card fade-in-section" style="transition-delay: 1.3s;">
+            <h2 class="text-4xl font-extrabold mb-6 flex items-center serif-heading" style="color: var(--color-dark-charcoal);">
+                <svg class="h-9 w-9 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary-rose);">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4-4 4 4 8-8" />
+                </svg>
+                Moments from Her Haven
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">
+                A glimpse into our service projects, worship nights, and sisterhood moments. These are placeholders—swap them with your real photos later.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Service+Day" 
+                         alt="Her Haven service day placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Serving together at a local women’s shelter.">
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Prayer+Night" 
+                         alt="Her Haven prayer gathering placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Prayer + worship night on campus.">
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Outreach+Booth" 
+                         alt="Her Haven outreach booth placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Our outreach booth at a community event.">
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Sisterhood" 
+                         alt="Her Haven sisterhood hangout placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Sisterhood hangout and check-in night.">
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Bible+Study" 
+                         alt="Her Haven Bible study placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Diving into the Word together.">
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <img src="https://placehold.co/600x400/F8F4F2/A3667B?text=Fundraiser" 
+                         alt="Her Haven fundraiser placeholder" 
+                         class="w-full h-56 gallery-image"
+                         data-caption="Fundraising to support women and families in shelters.">
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Testimonials / Stories -->
+        <section id="testimonials" class="p-10 rounded-3xl card fade-in-section" style="transition-delay: 1.35s;">
+            <h2 class="text-4xl font-extrabold mb-6 flex items-center serif-heading" style="color: var(--color-dark-charcoal);">
+                <svg class="h-9 w-9 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6m-6 4h4M5 6h14a2 2 0 012 2v11l-4-3-4 3-4-3-4 3V8a2 2 0 012-2z" />
+                </svg>
+                Stories from the Haven
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">
+                You can replace these placeholders with real quotes from members and women impacted by Her Haven (with permission). It makes the page feel human and powerful.
+            </p>
+            <div class="grid gap-8 md:grid-cols-3">
+                <div class="p-6 rounded-2xl border border-gray-200 shadow-sm" style="background-color: var(--color-soft-rose-bg);">
+                    <div class="text-4xl text-rose-300 mb-2 leading-none">“</div>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Her Haven has been a safe place for me to grow in my faith and actually serve women who need help. I don’t feel helpless anymore—I feel called.
+                    </p>
+                    <p class="text-sm font-semibold text-gray-900">– Placeholder Member Name</p>
+                    <p class="text-xs text-gray-500">Student Member</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 shadow-sm bg-white">
+                    <div class="text-4xl text-rose-300 mb-2 leading-none">“</div>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Planning events and managing projects in Her Haven prepared me for leadership in real life. And I got to do it all while keeping Jesus at the center.
+                    </p>
+                    <p class="text-sm font-semibold text-gray-900">– Placeholder Officer Name</p>
+                    <p class="text-xs text-gray-500">Officer</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 shadow-sm" style="background-color: #FDFCEF;">
+                    <div class="text-4xl text-rose-300 mb-2 leading-none">“</div>
+                    <p class="text-sm text-gray-700 mb-4">
+                        The support I received through this ministry was exactly what I needed—practical, emotional, and spiritual. I felt seen, not just counted.
+                    </p>
+                    <p class="text-sm font-semibold text-gray-900">– Placeholder Recipient</p>
+                    <p class="text-xs text-gray-500">Partner Shelter</p>
+                </div>
+            </div>
+        </section>
 
         <!-- Section 4: Club Officers (Professional Grid Layout with Images) -->
         <section id="officers" class="p-10 rounded-3xl card fade-in-section" style="transition-delay: 1.4s;">
@@ -378,66 +539,87 @@
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
                 
-                <!-- Officer Card Component -->
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="morola.png" alt="Morola Omotoso" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Morola Omotoso</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Founder & President</p>
-                </div>
+                <!-- Each officer card is now clickable: link to their about page -->
+                <!-- You can change these href values to whatever your actual pages are called -->
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="isa.png" alt="Isabella Acosta-Cruz" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Isabella Acosta-Cruz</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Vice President</p>
-                </div>
+                <a href="about-morola-omotoso.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="morola.png" alt="Morola Omotoso" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Morola Omotoso</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Founder & President</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=E.M.R." alt="Emma Martinez-Rosado" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Emma Martinez-Rosado</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Service Coordinator</p>
-                </div>
+                <a href="about-isabella-acosta-cruz.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="isa.png" alt="Isabella Acosta-Cruz" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Isabella Acosta-Cruz</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Vice President</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=M.D.&D.L." alt="Macy Davis & Daisy Lopez" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Macy Davis</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Communications & Social Media</p>
-                </div>
+                <a href="about-emma-martinez-rosado.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=E.M.R." alt="Emma Martinez-Rosado" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Emma Martinez-Rosado</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Service Coordinator</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="aracely.png" alt="Aracely Nuncio" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Aracely Nuncio</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Events & Logistics Coordinator</p>
-                </div>
+                <a href="about-macy-davis.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=M.D.&D.L." alt="Macy Davis & Daisy Lopez" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Macy Davis</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Communications & Social Media</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=S.S.J." alt="Symone Speed-Jones" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Symone Speed-Jones</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Treasurer</p>
-                </div>
+                <a href="about-aracely-nuncio.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="aracely.png" alt="Aracely Nuncio" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Aracely Nuncio</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Events & Logistics Coordinator</p>
+                    </div>
+                </a>
 
-                 <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=G.T." alt="Gracie Statton" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Gracie Statton</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Wellness & Prayer Leader</p>
-                </div>
+                <a href="about-symone-speed-jones.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=S.S.J." alt="Symone Speed-Jones" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Symone Speed-Jones</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Treasurer</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=G.B." alt="Grace Bland" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Grace Bland</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Service Coordinator #2</p>
-                </div>
+                <a href="about-gracie-statton.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=G.S." alt="Gracie Statton" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Gracie Statton</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Wellness & Prayer Leader</p>
+                    </div>
+                </a>
 
-                <div class="text-center group p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
-                    <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=M.M." alt="Mariana Mendo" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
-                    <p class="text-lg font-bold text-gray-900">Mariana Mendo</p>
-                    <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Outreach Coordinator</p>
-                </div>
+                <a href="about-grace-bland.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=G.B." alt="Grace Bland" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Grace Bland</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Service Coordinator #2</p>
+                    </div>
+                </a>
+
+                <a href="about-mariana-mendo.html" class="group block">
+                    <div class="text-center p-8 rounded-2xl shadow-lg border-2 border-gray-200 transition duration-300 hover:shadow-xl hover:bg-gray-50" style="background-color: var(--color-soft-rose-bg);">
+                        <img src="https://placehold.co/110x110/A3667B/F8F4F2?text=M.M." alt="Mariana Mendo" class="rounded-full w-28 h-28 mx-auto mb-4 object-cover border-4 border-rose-300 group-hover:border-rose-500 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Mariana Mendo</p>
+                        <p class="text-sm font-semibold" style="color: var(--color-primary-rose);">Outreach Coordinator</p>
+                    </div>
+                </a>
                 
                 <!-- Sponsor / Open Positions (Taupe/Gold Border) -->
                 <div class="text-center p-8 rounded-2xl shadow-lg border-4 border-solid flex flex-col justify-center items-center col-span-2 sm:col-span-1 xl:col-span-1"
                      style="background-color: #FDFCEF; border-color: var(--color-secondary-taupe);">
                     <p class="text-2xl font-extrabold serif-heading" style="color: var(--color-dark-charcoal);">Hannah Mercado</p>
                     <p class="text-base font-medium text-gray-700 mb-4">Faculty Sponsor and Advisor</p>
+                </div>
             </div>
         </section>
 
@@ -477,6 +659,15 @@
         <p class="mt-6 text-xs text-gray-500">Website developed by the Her Haven Communications Team! All code was created by our Founder/President</p>
     </footer>
 
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close image">&times;</button>
+            <img id="lightbox-image" class="lightbox-image" alt="">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
     <script>
         // --- JAVASCRIPT FOR INTERACTIVITY AND ANIMATIONS ---
         
@@ -486,22 +677,16 @@
         const iconOpen = document.getElementById('menu-icon-open');
         const iconClose = document.getElementById('menu-icon-close');
 
-        // Toggle function to open/close the mobile menu
         function toggleMobileMenu() {
             const isOpen = mobileMenu.classList.toggle('open');
-            
-            // Toggle icons
             iconOpen.classList.toggle('hidden', isOpen);
             iconClose.classList.toggle('hidden', !isOpen);
         }
 
-        // Event listener for the hamburger button
         menuButton.addEventListener('click', toggleMobileMenu);
 
-        // Close menu when a link inside it is clicked (for smooth scroll)
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                // Wait briefly for scroll to start before closing
                 setTimeout(() => {
                     if (mobileMenu.classList.contains('open')) {
                         toggleMobileMenu();
@@ -511,32 +696,38 @@
         });
 
 
-        // --- 2. Utility Function: Copy to Clipboard ---
+        // --- 2. Utility Function: Copy to Clipboard (Modern + fallback) ---
         function copyToClipboard(textToCopy, button) {
-            const tempInput = document.createElement('textarea');
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    const originalText = button.textContent;
-                    // Temporary change button appearance to confirm copy (using the rose color for emphasis)
-                    button.textContent = 'Number Copied!';
-                    button.style.backgroundColor = 'var(--color-primary-rose)'; 
-                    button.style.color = 'white';
-                    
-                    // Reset button after a short delay
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.style.backgroundColor = 'var(--color-secondary-taupe)';
-                        button.style.color = 'var(--color-dark-charcoal)';
-                    }, 1800);
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => handleCopySuccess(button))
+                    .catch(err => console.error('Copy failed: ', err));
+            } else {
+                const tempInput = document.createElement('textarea');
+                tempInput.value = textToCopy;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) handleCopySuccess(button);
+                } catch (err) {
+                    console.error('Copy failed: ', err);
                 }
-            } catch (err) {
-                console.error('Copy failed: ', err);
+                document.body.removeChild(tempInput);
             }
-            document.body.removeChild(tempInput);
+        }
+
+        function handleCopySuccess(button) {
+            const originalText = button.textContent;
+            button.textContent = 'Number Copied!';
+            button.style.backgroundColor = 'var(--color-primary-rose)'; 
+            button.style.color = 'white';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = 'var(--color-secondary-taupe)';
+                button.style.color = 'var(--color-dark-charcoal)';
+            }, 1800);
         }
 
         // --- 3. Animation Function: Donation Goal Counter ---
@@ -544,22 +735,16 @@
             const progressBar = document.getElementById('progress-bar');
             const currentAmountSpan = document.getElementById('current-amount');
             
-            // Set goal achieved (e.g., $650 out of $1000)
             const percentage = Math.min((finalAmount / target) * 100, 100); 
-
-            // Set the width for the progress bar animation
             progressBar.style.width = percentage + '%';
 
-            // Animated number counter
             let start = 0;
-            const duration = 1800; // milliseconds
+            const duration = 1800;
             const startTime = performance.now();
 
             function step(currentTime) {
                 const elapsedTime = currentTime - startTime;
                 const progress = Math.min(elapsedTime / duration, 1);
-                
-                // Calculate the current value using progress (ease-out effect)
                 const currentValue = Math.floor(start + (finalAmount - start) * progress);
                 currentAmountSpan.textContent = '$' + currentValue.toLocaleString();
 
@@ -572,34 +757,72 @@
             requestAnimationFrame(step);
         }
         
-        // --- 4. Animation Function: Intersection Observer for Fade-In Scroll ---
+        // --- 4. Intersection Observer for Fade-In Scroll ---
         const fadeObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Stop observing once visible
+                    observer.unobserve(entry.target); 
                 }
             });
         }, {
-            threshold: 0.15, // Trigger when 15% of the element is visible
+            threshold: 0.15,
             rootMargin: '0px 0px -50px 0px' 
         });
 
+        // --- 5. Lightbox for Gallery ---
+        function initLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            function openLightbox(src, caption) {
+                lightboxImage.src = src;
+                lightboxImage.alt = caption || '';
+                lightboxCaption.textContent = caption || '';
+                lightbox.classList.add('open');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lightboxImage.src = '';
+                lightboxCaption.textContent = '';
+            }
+
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                img.addEventListener('click', () => {
+                    const src = img.getAttribute('src');
+                    const caption = img.getAttribute('data-caption');
+                    openLightbox(src, caption);
+                });
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                    closeLightbox();
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            // Apply Intersection Observer to all sections that need to fade in
             document.querySelectorAll('.fade-in-section').forEach(section => {
                 fadeObserver.observe(section);
             });
             
-            // --- Placeholder Data & Initialization ---
             const targetGoal = 1000;
-            const currentDonationAmount = 0; // Example amount
-            
-            // Run the progress animation when the page loads
+            const currentDonationAmount = 0; // change this when donations go up
             animateProgress(currentDonationAmount, targetGoal);
 
-
-            // --- Prayer Form Submission Handler ---
+            // Prayer Form
             const prayerForm = document.getElementById('prayer-form');
             const prayerInput = document.getElementById('prayer-input');
             const prayerMessage = document.getElementById('prayer-message');
@@ -609,25 +832,24 @@
 
                 if (prayerInput.value.trim() === '') {
                     console.error("Prayer request cannot be empty.");
-                    // In a real app, show a custom error message here
                     return;
                 }
 
-                // Temporary submission simulation
                 console.log("Submitted Prayer:", prayerInput.value.trim());
 
-                // Hide the form and show the confirmation message
                 prayerForm.classList.add('hidden');
                 prayerMessage.classList.remove('hidden');
 
-                // Clear the input and reset the form after a few seconds
                 prayerInput.value = '';
                 
                 setTimeout(() => {
                     prayerMessage.classList.add('hidden');
                     prayerForm.classList.remove('hidden');
-                }, 5000); // Wait 5 seconds before resetting
+                }, 5000);
             });
+
+            // Init lightbox
+            initLightbox();
         });
     </script>
 </body>
