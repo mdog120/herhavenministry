@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Morola Omotoso | Her Haven Ministry</title>
+    <link rel="icon" href="https://placehold.co/32x32/A3667B/1F2937?text=HH" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+        :root {
+            --color-dark-charcoal: #1F2937;
+            --color-beige-base: #F8F4F2;
+            --color-primary-rose: #A3667B;
+            --color-secondary-taupe: #D4C1A8;
+            --color-soft-rose-bg: #FFF0F3;
+            --color-card-border: #E5D7DB;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-beige-base);
+            color: var(--color-dark-charcoal);
+            padding-top: 88px;
+        }
+
+        h1, h2, h3, .serif-heading {
+            font-family: 'Lora', serif;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+
+        .hero-background {
+            background: radial-gradient(circle at top left, #F4E6EC 0%, #F8F4F2 40%, #F8F4F2 100%);
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid var(--color-card-border);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 26px rgba(31,41,55,0.12);
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .pill-tag {
+            border-radius: 9999px;
+            border: 1px solid rgba(163,102,123,0.25);
+            background-color: #FFF7FA;
+        }
+
+        .timeline-dot {
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 9999px;
+            background-color: var(--color-primary-rose);
+            box-shadow: 0 0 0 6px rgba(163,102,123,0.25);
+        }
+
+        .back-button {
+            border: 1px solid rgba(31,41,55,0.18);
+            background-color: white;
+        }
+
+        .back-button:hover {
+            background-color: #F3ECE8;
+        }
+
+        .highlight-chip {
+            border-radius: 9999px;
+            padding: 0.35rem 0.9rem;
+            background-color: #FDF2F8;
+            border: 1px solid #F5D0E7;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold tracking-widest"
+                     style="background-color: var(--color-primary-rose); color: #F8F4F2;">
+                    HH
+                </div>
+                <div class="flex flex-col leading-tight">
+                    <span class="serif-heading text-lg font-bold" style="color: var(--color-dark-charcoal);">
+                        Her Haven Ministry
+                    </span>
+                    <span class="text-[11px] uppercase tracking-[0.18em] text-gray-500">
+                        About the Founder
+                    </span>
+                </div>
+            </a>
+
+            <a href="index.html" class="back-button inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold text-gray-700 shadow-sm transition duration-150">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Main Site
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-background border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-18 md:py-20 flex flex-col md:flex-row md:items-center gap-10 fade-in-section">
+            
+            <!-- Photo -->
+            <div class="flex justify-center md:justify-start md:w-1/3">
+                <div class="relative">
+                    <div class="absolute -inset-1 rounded-full blur-xl opacity-40" style="background: radial-gradient(circle, rgba(163,102,123,0.4), transparent);"></div>
+                    <div class="relative rounded-full border-4 border-rose-200 shadow-xl bg-white p-2">
+                        <img src="morola.png"
+                             alt="Portrait of Morola Omotoso"
+                             class="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="md:w-2/3 space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="highlight-chip text-rose-700">
+                        Founder • President • Vision Carrier
+                    </span>
+                </div>
+                <h1 class="serif-heading text-4xl sm:text-5xl font-extrabold tracking-tight" style="color: var(--color-dark-charcoal);">
+                    Morola Omotoso
+                </h1>
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
+                    Born in London, raised in Dallas, and fueled by faith, justice, and a deep love for women who feel unseen. 
+                    Morola is the founder and president of Her Haven Ministry—a student-led space where Christian community and advocacy for women in abusive relationships meet.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        School of Science & Engineering @ Townview
+                    </span>
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        National Volleyball Athlete
+                    </span>
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        Choir • Student Council • Coder
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-14 space-y-12 sm:space-y-16">
+
+        <!-- SECTION: A Little About Me -->
+        <section class="grid md:grid-cols-5 gap-10 items-start fade-in-section">
+            <div class="md:col-span-3 card rounded-3xl p-7 sm:p-9">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary-rose);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11s1.343 3 3 3 3-1.343 3-3zM4 19a4 4 0 018 0M18 8v8m-4-4h8" />
+                    </svg>
+                    A Little About Me
+                </h2>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                    I was born in London and moved to the United States when I was nine. That mix of cultures, spaces, and communities 
+                    gave me a heart for people who feel like they don’t fully “fit” anywhere—and a desire to help them feel held and seen.
+                </p>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Right now, I attend the School of Science and Engineering at Townview Magnet Center. It’s high-achieving and intense, 
+                    but it’s also where God began to stir something deeper in me: the need for a faith-filled community that’s not just social, 
+                    but mission-driven.
+                </p>
+            </div>
+
+            <div class="md:col-span-2 rounded-3xl border border-dashed border-rose-200 p-5 sm:p-6" style="background-color: var(--color-soft-rose-bg);">
+                <p class="text-xs uppercase tracking-[0.24em] text-rose-500 font-semibold mb-3">
+                    Identity Snapshot
+                </p>
+                <dl class="space-y-3 text-sm text-gray-800">
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Hometown Rhythm:</dt>
+                        <dd class="text-right">London ➝ Dallas</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Current School:</dt>
+                        <dd class="text-right">School of Science & Engineering</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Campus Home:</dt>
+                        <dd class="text-right">Townview Magnet Center</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Big Themes:</dt>
+                        <dd class="text-right">Faith • Freedom • Sisterhood</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- SECTION: Why I Started Her Haven (Story + “Timeline”) -->
+        <section class="fade-in-section">
+            <div class="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-2 flex items-center">
+                        <svg class="w-7 h-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                        </svg>
+                        Why I Started Her Haven
+                    </h2>
+                    <p class="text-sm text-gray-600 max-w-xl">
+                        The heart, the burden, and the reason “Her Haven” even exists.
+                    </p>
+                </div>
+                <span class="text-xs sm:text-[11px] tracking-[0.18em] uppercase text-gray-500">
+                    1 in 3 women in Texas • 1 in 5 in the U.S.
+                </span>
+            </div>
+
+            <div class="md:grid md:grid-cols-5 gap-10 items-start">
+                <div class="md:col-span-3 card rounded-3xl p-7 sm:p-9">
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                        I felt two strong pulls at the same time: a deep need for real Christian community at school, 
+                        and a fire in my heart to help women escape the trapped bondage of abusive relationships.
+                        Instead of choosing one or the other, I decided to bring them together.
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                        Her Haven was born from that intersection—where faith isn’t just something we talk about, but something we live out 
+                        through action, generosity, and advocacy. I didn’t want just a Christian club; I wanted a ministry that 
+                        actually moves resources, raises awareness, and points women toward safety and hope in Jesus.
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        My dream is that every girl who walks into a Her Haven space knows two things immediately: 
+                        <span class="font-semibold">you’re not alone, and you’re not powerless.</span>
+                    </p>
+                </div>
+
+                <!-- mini vertical "timeline" on the side -->
+                <div class="md:col-span-2 mt-8 md:mt-0">
+                    <div class="rounded-3xl border border-gray-200 bg-white p-6 sm:p-7 shadow-sm">
+                        <p class="text-xs uppercase tracking-[0.28em] text-rose-500 font-semibold mb-4">
+                            Heart Checkpoints
+                        </p>
+                        <div class="relative pl-6 border-l border-rose-200 space-y-6">
+                            <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-semibold text-gray-500">London ➝ Dallas</p>
+                                <p class="text-sm text-gray-800">
+                                    Learning what it feels like to be new, different, and in-between places.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">Townview, STEM & Faith</p>
+                                <p class="text-sm text-gray-800">
+                                    Realizing that in a high-pressure academic space, hearts still need rest, safety, and Jesus.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">The Burden</p>
+                                <p class="text-sm text-gray-800">
+                                    Learning how many women live in abusive situations—and feeling that stat as a personal assignment, not random information.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">Her Haven Launch</p>
+                                <p class="text-sm text-gray-800">
+                                    Combining Christian community + active fundraising and support for women’s shelters. 
+                                    A ministry for students that still reaches beyond campus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Life on Campus -->
+        <section class="grid md:grid-cols-5 gap-10 items-start fade-in-section">
+            <div class="md:col-span-3 card rounded-3xl p-7 sm:p-9">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary-rose);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 8l2 2 4-4M7 21h10a2 2 0 002-2v-5a2 2 0 00-2-2H7a2 2 0 00-2 2v5a2 2 0 002 2z" />
+                    </svg>
+                    Life on Campus
+                </h2>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                    Outside of Her Haven, my life is very much “student in motion.” I’m balancing textbooks, practice, rehearsals, 
+                    leadership, and lines of code—all at the same time.
+                </p>
+                <ul class="mt-3 space-y-3 text-sm sm:text-base text-gray-800">
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">National Volleyball:</span> I play volleyball nationally, which means a lot of training, travel, and learning how to lead on and off the court.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Choir:</span> I sing in the choir, which is one of the places I get to worship, breathe, and reset.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Student Council:</span> I’m part of student council, helping bring student voices to the table where decisions are made.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Coding & Creativity:</span> I love to code—and yes, I coded this website. Building things from scratch and making them beautiful is one of my favorite ways to create.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 rounded-3xl border border-gray-200 bg-white p-6 sm:p-7 shadow-sm">
+                <p class="text-xs uppercase tracking-[0.24em] text-rose-500 font-semibold mb-4">
+                    My Current Season
+                </p>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-700">Student • Leader • Athlete • Creative</span>
+                    </div>
+                    <div class="h-2 w-full rounded-full bg-rose-100 overflow-hidden mt-2 mb-1">
+                        <div class="h-2 rounded-full" style="width: 78%; background-color: var(--color-primary-rose);"></div>
+                    </div>
+                    <p class="text-[11px] text-gray-500">
+                        This is my “full plate” era—but also my “fully surrendered to God’s plan” era.
+                    </p>
+                </div>
+
+                <div class="mt-5 space-y-2 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 uppercase tracking-[0.18em] text-[11px]">If you remember one thing:</p>
+                    <p>
+                        I don’t just want to build a club. I want to help build a generation of young women who love Jesus, 
+                        serve boldly, and refuse to look away from hard things.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Fun Facts -->
+        <section class="fade-in-section">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
+                    </svg>
+                    A Few Fun Things
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                        One Line Bio
+                    </p>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        London-born, Dallas-based, Jesus-centered STEM girl who loves code, community, and clean aesthetics.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl border border-gray-200" style="background-color: var(--color-soft-rose-bg);">
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                            If I’m not in class…
+                        </p>
+                        <p class="text-sm text-gray-800 leading-relaxed">
+                            I’m probably at practice, in rehearsal, sketching ideas for Her Haven, or fixing tiny details in this website.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                        What I Pray For
+                    </p>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        That Her Haven would be a real refuge. Not just a name, but a place where women encounter the love and freedom of Jesus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BACK -->
+        <section class="fade-in-section">
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200 pt-6">
+                <p class="text-xs sm:text-sm text-gray-600 max-w-md">
+                    Ready to see what Her Haven looks like in action? Head back to the main page to explore our projects, leadership team, and how you can get involved.
+                </p>
+                <a href="index.html"
+                   class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md transition duration-150"
+                   style="background-color: var(--color-primary-rose); color: #F8F4F2;">
+                    <span>Return to Her Haven Home</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-14 pb-10 text-center text-[11px] text-gray-500">
+        <p class="mb-1">&copy; 2025 Her Haven Ministry. All rights reserved.</p>
+        <p>Site concept & code by Morola Omotoso.</p>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                fadeObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
