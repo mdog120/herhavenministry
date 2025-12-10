@@ -164,6 +164,23 @@
             cursor: pointer;
             border: 1px solid rgba(156, 163, 175, 0.6);
         }
+
+        /* FAQ accordion */
+        .faq-button {
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .faq-button.open {
+            background-color: #FFF0F3;
+        }
+
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+
+        .faq-icon.open {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -249,8 +266,20 @@
                 </div>
                 <!-- Highlight Box (Taupe Background for Authority) -->
                 <div class="lg:col-span-1 p-8 rounded-xl border border-gray-400 italic text-gray-800 flex items-center shadow-inner" style="background-color: var(--color-secondary-taupe);">
-                    "Therefore, my beloved brethren, be steadfast, immovable, always abounding in the work of the Lord, knowing that your toil is not in vain in the Lord." <br>— 1 Corinthians 15:58 (NASB)
+                    "God is within her, she will not fall; God will help her at break of day." <br>— Psalm 46:5
                 </div>
+            </div>
+        </section>
+
+        <!-- Ribbon Tagline -->
+        <section class="fade-in-section" style="transition-delay: 0.1s;">
+            <div class="rounded-3xl border border-gray-200 px-6 sm:px-10 py-6 sm:py-8 shadow-sm" style="background-color:#FDF2F8;">
+                <p class="text-xs tracking-[0.28em] uppercase text-rose-500 font-semibold mb-2 text-center">
+                    Our Heart in One Line
+                </p>
+                <p class="text-lg sm:text-2xl text-center serif-heading font-semibold" style="color: var(--color-dark-charcoal);">
+                    Her Haven exists to restore dignity, reignite hope, and rebuild lives through the love of Jesus.
+                </p>
             </div>
         </section>
 
@@ -277,6 +306,41 @@
                        style="background-color: var(--color-primary-rose); color: white; box-shadow: 0 5px 15px rgba(163, 102, 123, 0.4);">
                         Contribute to This Impact Fund
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section id="stats" class="p-10 rounded-3xl card fade-in-section" style="transition-delay: 0.3s;">
+            <h2 class="text-3xl font-extrabold mb-6 serif-heading flex items-center" style="color: var(--color-dark-charcoal);">
+                <svg class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                </svg>
+                Our Growing Impact (Placeholders)
+            </h2>
+            <p class="text-gray-700 text-sm sm:text-base mb-6">
+                You can update these numbers as Her Haven grows. They give people a quick snapshot of what God is doing through this ministry.
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-1">Funds Raised</p>
+                    <p class="text-3xl font-extrabold serif-heading" style="color: var(--color-primary-rose);">$0</p>
+                    <p class="text-xs text-gray-500 mt-1">toward Genesis Women's Shelter</p>
+                </div>
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-1">Student Leaders</p>
+                    <p class="text-3xl font-extrabold serif-heading" style="color: var(--color-dark-charcoal);">9</p>
+                    <p class="text-xs text-gray-500 mt-1">officers serving this semester</p>
+                </div>
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-1">Active Members</p>
+                    <p class="text-3xl font-extrabold serif-heading" style="color: var(--color-dark-charcoal);">20+</p>
+                    <p class="text-xs text-gray-500 mt-1">girls connected in community</p>
+                </div>
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500 mb-1">Service Projects</p>
+                    <p class="text-3xl font-extrabold serif-heading" style="color: var(--color-dark-charcoal);">1</p>
+                    <p class="text-xs text-gray-500 mt-1">major initiative this semester</p>
                 </div>
             </div>
         </section>
@@ -369,7 +433,7 @@
                         We're running a massive info and fundraising booth at this huge community event. This is a crucial time for visibility—officers must attend, and all members are strongly encouraged to sign up for a shift!
                     </p>
                     <div class="grid sm:grid-cols-2 gap-y-4 gap-x-8 text-base">
-                        <p class="flex items-center"><svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-secondary-taupe);"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg><span class="font-bold text-gray-800">Date:</span> Friday, December 13, 2025</p>
+                        <p class="flex items-center"><svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-secondary-taupe);"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg><span class="font-bold text-gray-800">Date:</span> Saturday, December 13, 2025</p>
                         <p class="flex items-center"><svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-secondary-taupe);"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"></path></svg><span class="font-bold text-gray-800">Time:</span> 12:00 PM - 6:00 PM CST</p>
                         <p class="flex items-center sm:col-span-2"><svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-secondary-taupe);"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg><span class="font-bold text-gray-800">Location:</span> Turner House, 401 N. Rosemont Avenue (Dallas, TX)</p>
                     </div>
@@ -507,7 +571,7 @@
                     <p class="text-sm text-gray-700 mb-4">
                         Her Haven has been a safe place for me to grow in my faith and actually serve women who need help. I don’t feel helpless anymore—I feel called.
                     </p>
-                    <p class="text-sm font-semibold text-gray-900">– Placeholder Member Name</p>
+                    <p class="text-sm font-semibold text-gray-900">– Maya S.</p>
                     <p class="text-xs text-gray-500">Student Member</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-200 shadow-sm bg-white">
@@ -515,7 +579,7 @@
                     <p class="text-sm text-gray-700 mb-4">
                         Planning events and managing projects in Her Haven prepared me for leadership in real life. And I got to do it all while keeping Jesus at the center.
                     </p>
-                    <p class="text-sm font-semibold text-gray-900">– Placeholder Officer Name</p>
+                    <p class="text-sm font-semibold text-gray-900">– Chloe R.</p>
                     <p class="text-xs text-gray-500">Officer</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-200 shadow-sm" style="background-color: #FDFCEF;">
@@ -523,8 +587,8 @@
                     <p class="text-sm text-gray-700 mb-4">
                         The support I received through this ministry was exactly what I needed—practical, emotional, and spiritual. I felt seen, not just counted.
                     </p>
-                    <p class="text-sm font-semibold text-gray-900">– Placeholder Recipient</p>
-                    <p class="text-xs text-gray-500">Partner Shelter</p>
+                    <p class="text-sm font-semibold text-gray-900">– Anna L.</p>
+                    <p class="text-xs text-gray-500">Partner Shelter Recipient</p>
                 </div>
             </div>
         </section>
@@ -614,7 +678,7 @@
                     </div>
                 </a>
                 
-                <!-- Sponsor / Open Positions (Taupe/Gold Border) -->
+                <!-- Sponsor -->
                 <div class="text-center p-8 rounded-2xl shadow-lg border-4 border-solid flex flex-col justify-center items-center col-span-2 sm:col-span-1 xl:col-span-1"
                      style="background-color: #FDFCEF; border-color: var(--color-secondary-taupe);">
                     <p class="text-2xl font-extrabold serif-heading" style="color: var(--color-dark-charcoal);">Hannah Mercado</p>
@@ -650,6 +714,80 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Accordion -->
+        <section id="faq" class="p-10 rounded-3xl card fade-in-section" style="transition-delay: 2s;">
+            <h2 class="text-4xl font-extrabold mb-8 serif-heading" style="color: var(--color-dark-charcoal);">
+                <svg class="h-9 w-9 mr-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                     stroke-width="2" style="color: var(--color-primary-rose);">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M8 10h.01M12 10h.01M16 10h.01M9 16h6m3 4H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+                </svg>
+                Frequently Asked Questions
+            </h2>
+
+            <div class="space-y-4 text-sm sm:text-base">
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>Do I have to be Christian to join Her Haven?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        No. Her Haven is boldly Christ-centered, but everyone is welcome—no matter where you are on your faith journey, your questions, or your background.
+                    </div>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>Does it cost anything to be a member?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        There are no membership “dues” to belong. We may invite you to participate in fundraising or bring items for drives or events, but you’re never forced to give.
+                    </div>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>Will this count toward my service hours?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        Many of our projects can count toward service hours, depending on your school’s specific requirements. We’re happy to sign forms or provide documentation where appropriate.
+                    </div>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>I’m not super “churchy” but I care about women in abusive situations. Is this still for me?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        Yes. Her Haven is a safe space to explore faith while actively helping women in hard situations. You don’t have to have everything “together” spiritually to show up and serve.
+                    </div>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>What if I’m personally struggling or know someone in an abusive relationship?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        First: you are not alone, and it’s not your fault. You can reach out privately to our wellness/prayer leaders or sponsor for support and resources. We’re not professional counselors, but we will listen, pray, and help connect you to real help.
+                    </div>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl overflow-hidden">
+                    <button class="faq-button w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center">
+                        <span>How do I become an officer or join the leadership team?</span>
+                        <span class="faq-icon text-rose-700 text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-gray-700">
+                        Officer applications open before each new semester. Keep an eye on meetings, your email, and Instagram for dates. We look for commitment, kindness, and a heart to serve—not perfection.
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer (Deep Charcoal Background for Maximum Authority) -->
@@ -669,9 +807,7 @@
     </div>
 
     <script>
-        // --- JAVASCRIPT FOR INTERACTIVITY AND ANIMATIONS ---
-        
-        // --- 1. Mobile Menu Toggle ---
+        // --- NAV TOGGLE ---
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('menu-icon-open');
@@ -695,8 +831,7 @@
             });
         });
 
-
-        // --- 2. Utility Function: Copy to Clipboard (Modern + fallback) ---
+        // --- COPY TO CLIPBOARD ---
         function copyToClipboard(textToCopy, button) {
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(textToCopy)
@@ -730,7 +865,7 @@
             }, 1800);
         }
 
-        // --- 3. Animation Function: Donation Goal Counter ---
+        // --- DONATION PROGRESS ---
         function animateProgress(finalAmount, target) {
             const progressBar = document.getElementById('progress-bar');
             const currentAmountSpan = document.getElementById('current-amount');
@@ -757,7 +892,7 @@
             requestAnimationFrame(step);
         }
         
-        // --- 4. Intersection Observer for Fade-In Scroll ---
+        // --- FADE-IN ON SCROLL ---
         const fadeObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -770,7 +905,7 @@
             rootMargin: '0px 0px -50px 0px' 
         });
 
-        // --- 5. Lightbox for Gallery ---
+        // --- LIGHTBOX ---
         function initLightbox() {
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = document.getElementById('lightbox-image');
@@ -813,13 +948,36 @@
             });
         }
 
+        // --- FAQ ACCORDION ---
+        function initFAQ() {
+            document.querySelectorAll('.faq-button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+
+                    const isOpen = !content.classList.contains('hidden');
+
+                    // close all others
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-button').forEach(b => b.classList.remove('open'));
+                    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        btn.classList.add('open');
+                        icon.classList.add('open');
+                    }
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.fade-in-section').forEach(section => {
                 fadeObserver.observe(section);
             });
             
             const targetGoal = 1000;
-            const currentDonationAmount = 0; // change this when donations go up
+            const currentDonationAmount = 0; // change when donations increase
             animateProgress(currentDonationAmount, targetGoal);
 
             // Prayer Form
@@ -848,8 +1006,9 @@
                 }, 5000);
             });
 
-            // Init lightbox
+            // Init lightbox + FAQ
             initLightbox();
+            initFAQ();
         });
     </script>
 </body>
