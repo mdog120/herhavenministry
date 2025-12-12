@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Anna Gilmore | Her Haven Ministry</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+        :root {
+            --color-dark-charcoal: #1F2937;
+            --color-beige-base: #F8F4F2;
+            --color-primary-rose: #A3667B;
+            --color-secondary-taupe: #D4C1A8;
+            --color-soft-rose-bg: #FFF0F3;
+            --color-card-border: #E5D7DB;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-beige-base);
+            color: var(--color-dark-charcoal);
+            padding-top: 88px;
+        }
+
+        h1, h2, h3, .serif-heading {
+            font-family: 'Lora', serif;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+
+        .hero-background {
+            background: radial-gradient(circle at top left, #F4E6EC 0%, #F8F4F2 40%, #F8F4F2 100%);
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid var(--color-card-border);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 26px rgba(31,41,55,0.12);
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .pill-tag {
+            border-radius: 9999px;
+            border: 1px solid rgba(163,102,123,0.25);
+            background-color: #FFF7FA;
+        }
+
+        .timeline-dot {
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 9999px;
+            background-color: var(--color-primary-rose);
+            box-shadow: 0 0 0 6px rgba(163,102,123,0.25);
+        }
+
+        .back-button {
+            border: 1px solid rgba(31,41,55,0.18);
+            background-color: white;
+        }
+
+        .back-button:hover {
+            background-color: #F3ECE8;
+        }
+
+        .highlight-chip {
+            border-radius: 9999px;
+            padding: 0.35rem 0.9rem;
+            background-color: #FDF2F8;
+            border: 1px solid #F5D0E7;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold tracking-widest"
+                     style="background-color: var(--color-primary-rose); color: #F8F4F2;">
+                    HH
+                </div>
+                <div class="flex flex-col leading-tight">
+                    <span class="serif-heading text-lg font-bold" style="color: var(--color-dark-charcoal);">
+                        Her Haven Ministry
+                    </span>
+                    <span class="text-[11px] uppercase tracking-[0.18em] text-gray-500">
+                        About the Vice Service Coordinator
+                    </span>
+                </div>
+            </a>
+
+            <a href="index.html#officers" class="back-button inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold text-gray-700 shadow-sm transition duration-150">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Leadership
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-background border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-18 md:py-20 flex flex-col md:flex-row md:items-center gap-10 fade-in-section">
+            
+            <!-- Photo -->
+            <div class="flex justify-center md:justify-start md:w-1/3">
+                <div class="relative">
+                    <div class="absolute -inset-1 rounded-full blur-xl opacity-40"
+                         style="background: radial-gradient(circle, rgba(163,102,123,0.4), transparent);"></div>
+                    <div class="relative rounded-full border-4 border-rose-200 shadow-xl bg-white p-2">
+                        <img src="anna.png"
+                             alt="Portrait of Anna Gilmore"
+                             class="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="md:w-2/3 space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="highlight-chip text-rose-700">
+                        Vice Service Coordinator • Growing in Christ
+                    </span>
+                </div>
+                <h1 class="serif-heading text-4xl sm:text-5xl font-extrabold tracking-tight" style="color: var(--color-dark-charcoal);">
+                    Anna Gilmore
+                </h1>
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
+                    Born in Dallas, Texas, Anna is a joy-filled, curious, and intentional leader. As Vice Service Coordinator,
+                    she’s excited to strengthen her faith in Christ while serving others and learning along the way.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        Highland Park High School
+                    </span>
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        Best Buddies • Pickle for Cancer • Pack for a Purpose
+                    </span>
+                    <span class="pill-tag px-3 py-1 text-xs font-medium text-rose-800">
+                        Tennis • Friends • New Experiences
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-14 space-y-16">
+
+        <!-- A LITTLE ABOUT ME -->
+        <section class="grid md:grid-cols-5 gap-10 items-start fade-in-section">
+            <div class="md:col-span-3 card rounded-3xl p-9">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary-rose);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11s1.343 3 3 3 3-1.343 3-3zM4 19a4 4 0 018 0" />
+                    </svg>
+                    A Little About Me
+                </h2>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                    I was born in Dallas, Texas, and I go to Highland Park High School. I love being around people, trying new
+                    things, and saying “yes” to opportunities that help me grow.
+                </p>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Whether it’s on the tennis court, with friends, or serving in different clubs, I’m always learning more about
+                    who I am, who God is, and how I can love people better.
+                </p>
+            </div>
+
+            <div class="md:col-span-2 rounded-3xl border border-dashed border-rose-200 p-6" style="background-color: var(--color-soft-rose-bg);">
+                <p class="text-xs uppercase tracking-[0.24em] text-rose-500 font-semibold mb-3">
+                    Identity Snapshot
+                </p>
+                <dl class="space-y-3 text-sm text-gray-800">
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Hometown:</dt>
+                        <dd class="text-right">Dallas, Texas</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">School:</dt>
+                        <dd class="text-right">Highland Park High School</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Clubs:</dt>
+                        <dd class="text-right">Best Buddies • Pickle for Cancer • Pack for a Purpose</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt class="font-medium">Loves:</dt>
+                        <dd class="text-right">Tennis • Friends • Trying new things</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- WHY I SERVE -->
+        <section class="fade-in-section">
+            <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-2 flex items-center">
+                        <svg class="w-7 h-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                        </svg>
+                        Why I Serve in Her Haven
+                    </h2>
+                    <p class="text-sm text-gray-600 max-w-xl">
+                        The heart behind her “yes” to service, faith, and leadership.
+                    </p>
+                </div>
+                <span class="text-xs tracking-[0.18em] uppercase text-gray-500">
+                    Faith • Service • Growth
+                </span>
+            </div>
+
+            <div class="md:grid md:grid-cols-5 gap-10 items-start">
+                <div class="md:col-span-3 card rounded-3xl p-9">
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                        I wanted to be an officer in Her Haven so I could strengthen my faith with Christ and learn new things along
+                        the way. I saw it as a chance not only to serve, but to grow—with other girls who love Him too.
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                        Being Vice Service Coordinator means I get to help shape the way we serve, give, and show up for women who are
+                        hurting. That matters to me, and I’m excited to be part of something that is bigger than just myself or just
+                        my school.
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        My hope is that as I’m helping others, God is also teaching me—about humility, leadership, compassion, and
+                        what real Christ-like love looks like in action.
+                    </p>
+                </div>
+
+                <!-- mini timeline -->
+                <div class="md:col-span-2 mt-8 md:mt-0">
+                    <div class="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
+                        <p class="text-xs uppercase tracking-[0.28em] text-rose-500 font-semibold mb-4">
+                            Heart Checkpoints
+                        </p>
+                        <div class="relative pl-6 border-l border-rose-200 space-y-6">
+                            <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500">Dallas Beginnings</p>
+                                <p class="text-sm text-gray-800">
+                                    Growing up in Dallas, surrounded by community, family, and the beginnings of her walk with Christ.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">Highland Park High School</p>
+                                <p class="text-sm text-gray-800">
+                                    Learning how to balance school, sports, friendships, and faith in a busy environment.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">Serving Through Clubs</p>
+                                <p class="text-sm text-gray-800">
+                                    Joining Best Buddies, Pickle for Cancer, and Pack for a Purpose and discovering how good it feels to help others.
+                                </p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[0.47rem] top-1 timeline-dot"></div>
+                                <p class="text-xs font-semibold text-gray-500">Her Haven Leadership</p>
+                                <p class="text-sm text-gray-800">
+                                    Stepping into Vice Service Coordinator to strengthen her faith and serve women in meaningful, practical ways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIFE ON CAMPUS -->
+        <section class="grid md:grid-cols-5 gap-10 items-start fade-in-section">
+            <div class="md:col-span-3 card rounded-3xl p-9">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-primary-rose);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 8l2 2 4-4M7 21h10a2 2 0 002-2v-5a2 2 0 00-2-2H7a2 2 0 00-2 2v5a2 2 0 002 2z" />
+                    </svg>
+                    Life on Campus
+                </h2>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                    My school life is a mix of classes, clubs, and moments with friends. I like being active, involved, and open to
+                    trying new things that push me out of my comfort zone.
+                </p>
+                <ul class="mt-3 space-y-3 text-sm sm:text-base text-gray-800">
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Tennis:</span> Playing tennis keeps me moving, competitive, and reminds me how fun it is to show up and give my best.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Best Buddies:</span> I love connecting with students with intellectual and developmental disabilities and being a friend they can count on.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Pickle for Cancer:</span> Getting to support cancer awareness and fundraising through something fun like pickleball makes service feel joyful.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mt-1 mr-2 text-rose-500">•</span>
+                        <span><span class="font-semibold">Pack for a Purpose:</span> Helping pack supplies and support for people in need reminds me how small actions can still have a big impact.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
+                <p class="text-xs uppercase tracking-[0.24em] text-rose-500 font-semibold mb-4">
+                    My Current Season
+                </p>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-700">Student • Teammate • Friend • Servant Leader</span>
+                    </div>
+                    <div class="h-2 w-full rounded-full bg-rose-100 overflow-hidden mt-2 mb-1">
+                        <div class="h-2 rounded-full" style="width: 72%; background-color: var(--color-primary-rose);"></div>
+                    </div>
+                    <p class="text-[11px] text-gray-500">
+                        Learning how to follow Jesus in small daily choices, not just big moments.
+                    </p>
+                </div>
+
+                <div class="mt-5 space-y-2 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 uppercase tracking-[0.18em] text-[11px]">
+                        If you remember one thing:
+                    </p>
+                    <p>
+                        I want my time in Her Haven to grow my faith and help other girls feel seen, loved, and encouraged to walk with Christ too.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUN THINGS -->
+        <section class="fade-in-section">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="serif-heading text-2xl sm:text-3xl font-bold flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--color-secondary-taupe);">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
+                    </svg>
+                    A Few Fun Things
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                        One Line Bio
+                    </p>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        Dallas girl who loves Jesus, tennis, her friends, and saying “yes” to new things that grow her faith.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl border border-gray-200" style="background-color: var(--color-soft-rose-bg);">
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                            If I’m not in class…
+                        </p>
+                        <p class="text-sm text-gray-800 leading-relaxed">
+                            I’m probably on the court, hanging out with friends, trying something new, or dreaming about future adventures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                    <p class="text-xs uppercase tracking-[0.18em] text-rose-500 font-semibold mb-2">
+                        What I Pray For
+                    </p>
+                    <p class="text-sm text-gray-800 leading-relaxed">
+                        That God would use my time in Her Haven to deepen my relationship with Him and help me serve women with real love and humility.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BACK -->
+        <section class="fade-in-section">
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200 pt-6">
+                <p class="text-xs sm:text-sm text-gray-600 max-w-md">
+                    Want to see who else is serving with Anna? Head back to the main page to explore our full leadership team.
+                </p>
+                <a href="index.html#officers"
+                   class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md transition duration-150"
+                   style="background-color: var(--color-primary-rose); color: #F8F4F2;">
+                    Return to Leadership
+                    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-14 pb-10 text-center text-[11px] text-gray-500">
+        <p class="mb-1">&copy; 2025 Her Haven Ministry. All rights reserved.</p>
+        <p>Site concept & code by Morola Omotoso.</p>
+    </footer>
+
+    <script>
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                fadeObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
